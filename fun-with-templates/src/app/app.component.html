@@ -1,0 +1,30 @@
+<h1>Hello Templates</h1>
+
+<hr>
+
+<ng-template #myTemplate let-a="x" let-b="y" let-data>
+  <h2>I am an h2 element</h2>
+  <h3>And I am an h3 element</h3>
+  <div [style.color]="data.color" [style.font-size]="data.size">
+    the first variable is = {{a}} 
+    B = {{b}}  
+  </div>
+</ng-template>
+
+<hr>
+
+<ul>
+  <li *ngFor="let item of thingsToDoEveryday">{{item}}</li>
+  <ng-container *ngIf="isTodayFriday">
+    <li *ngFor="let item of thingsToDoToday">{{item}}</li>
+  </ng-container>
+</ul>
+
+<h4>Here is another ng container</h4>
+<ng-container *ngTemplateOutlet="myTemplate;context:dataContext1"></ng-container>
+<ng-container *ngTemplateOutlet="myTemplate;context:dataContext2"></ng-container>
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+<ng-container *ngTemplateOutlet="myTemplate"></ng-container>
+
+
+<h4>I am an h4 element</h4>
