@@ -62,3 +62,15 @@ and use it in ng-container like this:
 <ng-container *ngTemplateOutlet="myTemplate;context:dataContext1"></ng-container>
 <ng-container *ngTemplateOutlet="myTemplate;context:dataContext2"></ng-container>
 ```
+
+## Exercise
+- Create a component called app-price-list
+- Accept input called prices of type number []
+- The component should display the list of prices
+- Each price that is greater than 1000, should be displayed differently
+- To decide how to display the large numbers, the component should also receive an additional input of type TemaplateRef<any> that is called "expensiveTemplate"
+- All "exepensive" prices should be displayed using this template
+- Use the component 3 times to display the same list but the expensive items should be displayed in different ways:
+    - In red
+    - In Bold
+    - In larger font
