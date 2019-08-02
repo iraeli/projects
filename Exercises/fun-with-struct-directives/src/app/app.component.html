@@ -1,0 +1,44 @@
+<h2>Demo of *ngFor</h2>
+
+<ul>
+  <li *ngFor="let word of words; let i = index">
+    {{i}}. {{word}}
+  </li>
+</ul>
+
+<ul>
+  <ng-template ngFor let-word="$implicit" [ngForOf]="words" let-i="index">
+    <li>
+      {{i}}. {{word}}
+    </li>
+  </ng-template>
+</ul>
+
+<ul>
+  <li *appFor="let word repeat words; let i = counter; let zugi = even" [class.zugi]="zugi">
+    {{i}}. {{word}}
+  </li>
+</ul>
+
+
+
+<!-- 
+Micro Syntax
+let bla ....-> let-bla
+let bla2 = val .... -> let-bla2="val"
+xx val ....-> [ngForXx]="val" 
+-->
+
+
+<hr>
+
+<h1>Flag = {{flag}}</h1>
+<button (click)="toggleFlag()">Toggle!</button>
+
+
+<div class="yes" *appIf="flag">
+  YES!!!
+</div>
+
+
+
