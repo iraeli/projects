@@ -6,11 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  flag: boolean = true;
+text: string ;
+ 
+  setValidation(value: boolean) {
 
-  words: string[] = ['Sunday', 'Monday', 'Tuesday', 'Wednesday'];
-
-  toggleFlag() {
-    this.flag = !this.flag;
+    console.log('not valid ');
   }
+
 }

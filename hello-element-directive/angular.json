@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "fun-with-struct-directives": {
+    "hello-element-directive": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/fun-with-struct-directives",
+            "outputPath": "dist/hello-element-directive",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -58,18 +58,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "fun-with-struct-directives:build"
+            "browserTarget": "hello-element-directive:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "fun-with-struct-directives:build:production"
+              "browserTarget": "hello-element-directive:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "fun-with-struct-directives:build"
+            "browserTarget": "hello-element-directive:build"
           }
         },
         "test": {
@@ -106,15 +106,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "fun-with-struct-directives:serve"
+            "devServerTarget": "hello-element-directive:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "fun-with-struct-directives:serve:production"
+              "devServerTarget": "hello-element-directive:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "fun-with-struct-directives"
+  "defaultProject": "hello-element-directive"
 }

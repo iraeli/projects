@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to fun-with-struct-directives!');
+    expect(page.getTitleText()).toEqual('Welcome to hello-element-directive!');
   });
 
   afterEach(async () => {

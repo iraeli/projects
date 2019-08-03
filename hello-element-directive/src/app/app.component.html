@@ -1,0 +1,8 @@
+<div>
+    <input #inputText  appIsValid [text]="inputText.value"   type="text" 
+    (isValid)="setValidation($event)"/>
+
+    <input appDisappear  [delay]="5000" type="text" 
+    />
+
+</div>
