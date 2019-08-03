@@ -1,0 +1,9 @@
+<ng-container *ngIf="isOn">
+    <ng-container *ngTemplateOutlet="onTemplate; context: {$implicit:value}">
+    </ng-container>
+</ng-container>
+
+<ng-container *ngIf="!isOn">
+    <ng-container *ngTemplateOutlet="offTemplate; context: {$implicit:value}">
+    </ng-container>
+</ng-container>

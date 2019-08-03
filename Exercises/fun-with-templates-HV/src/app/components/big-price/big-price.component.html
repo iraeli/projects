@@ -1,0 +1,21 @@
+<ng-container *ngIf="redTemplate != null && expensivePrice>bigNumber">
+  <li>
+    <ng-container *ngTemplateOutlet="redTemplate; context: {$implicit:expensivePrice}">
+    </ng-container>
+  </li>
+</ng-container>
+
+<ng-container *ngIf="boldTemplate != null && expensivePrice>bigNumber">
+  <li>
+    <ng-container *ngTemplateOutlet="boldTemplate; context: {$implicit:expensivePrice}">
+    </ng-container>
+  </li>
+</ng-container>
+
+
+<ng-container *ngIf="largerFont != null && expensivePrice>bigNumber">
+  <li>
+    <ng-container *ngTemplateOutlet="largerFont; context: {$implicit:expensivePrice}">
+    </ng-container>
+  </li>
+</ng-container>
